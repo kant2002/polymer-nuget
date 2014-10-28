@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>polymer</id>
+    <version>0.4.2</version>
+    <authors>Andrey Kurdyumov</authors>
+    <owners>Andrey Kurdyumov</owners>
+    <!--licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl-->
+    <projectUrl>https://github.com/kant2002/polymer-nuget</projectUrl>
+    <iconUrl>https://www.polymer-project.org/images/logos/p-logo-32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Polymer is a pioneering library that makes it faster and easier than ever before to build beautiful applications on the web</description>
+    <tags>Polymer web components</tags>
+    <dependencies>
+        <dependency id="polymer-core-component-page" version="0.4.2" />
+        <!-- 
+            This is dependency for resolving cyclic dependency 
+            which specified in bower
+        -->
+        <dependency id="polymer-cyclic" version="0.4.2" />
+    </dependencies>
+  </metadata>
+</package>
