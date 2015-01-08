@@ -110,9 +110,33 @@ function Update-Paper-Elements() {
     Update-Nuget $package "paper-toggle-button"
 }
 
-Update-Platform
-Update-Polymer-Cyclic
-Update-Polymer
-Update-Polymer-Core-Component-Page
-Update-Polymer-Core-Elements
-Update-Paper-Elements
+function Generate-Package() {
+    param([string]$name, [string]$version)
+    $nuget = ".\Nuget.exe"
+    
+    mkdir -force dist\$version
+    &$nuget pack $name\$name.nuspec -OutputDirectory dist\$version
+}
+
+function Generate-All-Packages() {
+    $version = "0.5.2"
+    
+    Generate-Package "polymer-platform" $version
+    Generate-Package "polymer-cyclic" $version
+    Generate-Package "polymer" $version
+    Generate-Package "polymer-core-component-page" $version
+    Generate-Package "polymer-core-elements" $version
+    Generate-Package "paper-elements" $version
+}
+
+function Update-All() {
+    Update-Platform
+    Update-Polymer-Cyclic
+    Update-Polymer
+    Update-Polymer-Core-Component-Page
+    Update-Polymer-Core-Elements
+    Update-Paper-Elements
+}
+
+#Update-All
+Generate-All-Packages

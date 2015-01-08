@@ -1,3 +1,4 @@
 *.nupkg
 *.bak
 bower_components/
+dist/
