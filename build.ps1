@@ -11,6 +11,7 @@ function Update-Platform() {
 
 function Update-Polymer-Cyclic() {
     Update-Nuget "polymer-cyclic" "polymer"
+    Update-Nuget "polymer-cyclic" "webcomponentsjs"
 }
 
 function Update-Polymer() {
@@ -35,14 +36,17 @@ function Update-Polymer-Core-Elements() {
     Update-Nuget "polymer-core-elements" "core-dropdown-menu"
     Update-Nuget "polymer-core-elements" "core-elements"
     Update-Nuget "polymer-core-elements" "core-field"
+    Update-Nuget "polymer-core-elements" "core-focusable"
     Update-Nuget "polymer-core-elements" "core-header-panel"
     Update-Nuget "polymer-core-elements" "core-icon"
     Update-Nuget "polymer-core-elements" "core-icon-button"
     Update-Nuget "polymer-core-elements" "core-icons"
     Update-Nuget "polymer-core-elements" "core-iconset"
     Update-Nuget "polymer-core-elements" "core-iconset-svg"
+    Update-Nuget "polymer-core-elements" "core-image"
     Update-Nuget "polymer-core-elements" "core-input"
     Update-Nuget "polymer-core-elements" "core-item"
+    Update-Nuget "polymer-core-elements" "core-label"
     Update-Nuget "polymer-core-elements" "core-layout-grid"
     Update-Nuget "polymer-core-elements" "core-layout-trbl"
     Update-Nuget "polymer-core-elements" "core-list"
@@ -54,13 +58,16 @@ function Update-Polymer-Core-Elements() {
     Update-Nuget "polymer-core-elements" "core-overlay"
     Update-Nuget "polymer-core-elements" "core-pages"
     Update-Nuget "polymer-core-elements" "core-range"
+    Update-Nuget "polymer-core-elements" "core-resizable"
     Update-Nuget "polymer-core-elements" "core-scaffold"
     Update-Nuget "polymer-core-elements" "core-scroll-header-panel"
+    Update-Nuget "polymer-core-elements" "core-scroll-threshold"
     Update-Nuget "polymer-core-elements" "core-selection"
     Update-Nuget "polymer-core-elements" "core-selector"
     Update-Nuget "polymer-core-elements" "core-shared-lib"
     Update-Nuget "polymer-core-elements" "core-signals"
     Update-Nuget "polymer-core-elements" "core-splitter"
+    Update-Nuget "polymer-core-elements" "core-style"
     Update-Nuget "polymer-core-elements" "core-tests"               # Probably have to remove that.
     Update-Nuget "polymer-core-elements" "core-toolbar"
     Update-Nuget "polymer-core-elements" "core-tooltip"
@@ -87,6 +94,7 @@ function Update-Paper-Elements() {
     Update-Nuget $package "core-a11y-keys"
     Update-Nuget $package "paper-checkbox"
     Update-Nuget $package "paper-dialog"
+    Update-Nuget $package "paper-dropdown"
     Update-Nuget $package "paper-dropdown-menu"
     Update-Nuget $package "paper-elements"
     Update-Nuget $package "paper-input"
@@ -96,6 +104,7 @@ function Update-Paper-Elements() {
     Update-Nuget $package "paper-radio-button"
     Update-Nuget $package "paper-radio-group"
     Update-Nuget $package "paper-slider"
+    Update-Nuget $package "paper-spinner"
     Update-Nuget $package "paper-tabs"
     Update-Nuget $package "paper-toast"
     Update-Nuget $package "paper-toggle-button"
