@@ -1,6 +1,6 @@
 {
   "name": "polymer-nuget",
-  "version": "0.5.2",
+  "version": "0.5.5",
   "homepage": "https://github.com/kant2002/polymer-nuget",
   "authors": [
     "Andrey Kurdyumov <kant2002@gmail.com>"
@@ -19,7 +19,8 @@
     "tests"
   ],
   "dependencies": {
-    "core-elements": "Polymer/core-elements#~0.5.2",
-    "paper-elements": "Polymer/paper-elements#~0.5.2"
+    "polymer": "Polymer/polymer#~0.5.5",
+    "core-elements": "Polymer/core-elements#~0.5.5",
+    "paper-elements": "Polymer/paper-elements#~0.5.5"
   }
 }

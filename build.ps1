@@ -3,6 +3,7 @@ function Update-Nuget {
         
     rm $nugetPackage/content/Scripts/Polymer/$bowerPackage -Recurse -Force
     cp bower_components/$bowerPackage $nugetPackage/content/Scripts/Polymer/ -Recurse -Force
+	rm bower_components/$bowerPackage -Recurse -Force
 }
 
 function Update-Platform() {
@@ -78,7 +79,7 @@ function Update-Polymer-Core-Elements() {
     Update-Nuget "polymer-core-elements" "marked-element"
     Update-Nuget "polymer-core-elements" "paper-button"
     Update-Nuget "polymer-core-elements" "paper-fab"
-    Update-Nuget "polymer-core-elements" "paper-focusable"
+    #Update-Nuget "polymer-core-elements" "paper-focusable"
     Update-Nuget "polymer-core-elements" "paper-icon-button"
     Update-Nuget "polymer-core-elements" "paper-ripple"
     Update-Nuget "polymer-core-elements" "paper-shadow"
@@ -119,9 +120,10 @@ function Generate-Package() {
 }
 
 function Generate-All-Packages() {
-    $version = "0.5.2"
+    param([string]$version)
     
-    Generate-Package "polymer-platform" $version
+	#This package is deprecated.
+    #Generate-Package "polymer-platform" $version --
     Generate-Package "polymer-cyclic" $version
     Generate-Package "polymer" $version
     Generate-Package "polymer-core-component-page" $version
@@ -129,8 +131,16 @@ function Generate-All-Packages() {
     Generate-Package "paper-elements" $version
 }
 
+function Push-Package() {
+    param([string]$name, [string]$version)
+    $nuget = ".\Nuget.exe"
+    
+    &$nuget push dist\$version\$name.$version.nupkg
+}
+
 function Update-All() {
-    Update-Platform
+    #This package is deprecated.
+    #Update-Platform
     Update-Polymer-Cyclic
     Update-Polymer
     Update-Polymer-Core-Component-Page
@@ -138,5 +148,18 @@ function Update-All() {
     Update-Paper-Elements
 }
 
+function Push-All-Packages() {
+    $version = "0.5.5"
+    #This package is deprecated.
+    #Push-Package "polymer-platform" $version
+   # Push-Package "polymer-cyclic" $version
+   # Push-Package "polymer" $version
+    Push-Package "polymer-core-component-page" $version
+    Push-Package "polymer-core-elements" $version
+    Push-Package "paper-elements" $version
+}
+
+$version = "0.5.5"
 #Update-All
-Generate-All-Packages
+#Generate-All-Packages $version
+Push-All-Packages $version

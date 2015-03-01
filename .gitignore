@@ -2,3 +2,9 @@
 *.bak
 bower_components/
 dist/
+paper-elements/content/
+polymer/content/
+polymer-core-component-page/content/
+polymer-core-elements/content/
+polymer-cyclic/content/
+polymer-platform/content/

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>polymer-core-component-page</id>
-    <version>0.5.2</version>
+    <version>0.5.5</version>
     <authors>Andrey Kurdyumov</authors>
     <owners>Andrey Kurdyumov</owners>
     <projectUrl>https://github.com/Polymer/polymer</projectUrl>
@@ -10,12 +10,12 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Polymer core compoment page</description>
     <dependencies>
-        <dependency id="polymer-platform" version="0.5.2" />
+        <dependency id="polymer-platform" version="0.5.5" />
         <!-- 
             This is dependency for resolving cyclic dependency 
             which specified in bower
         -->
-        <dependency id="polymer-cyclic" version="0.5.2" />
+        <dependency id="polymer-cyclic" version="0.5.5" />
     </dependencies>
   </metadata>
 </package>
