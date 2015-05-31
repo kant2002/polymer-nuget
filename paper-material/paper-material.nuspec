@@ -11,7 +11,7 @@
     <description>A material design container that looks like a lifted sheet of paper</description>
     <dependencies>
         <dependency id="polymer" version="1.0.0" />
-        <dependency id="polymer-styles" version="1.0.0" />
+        <dependency id="paper-styles" version="1.0.0" />
     </dependencies>
   </metadata>
 </package>

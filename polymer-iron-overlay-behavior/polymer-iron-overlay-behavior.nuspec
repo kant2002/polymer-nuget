@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>polymer-overlay-behavior</id>
+    <id>polymer-iron-overlay-behavior</id>
     <version>1.0.1</version>
     <authors>Andrey Kurdyumov</authors>
     <owners>Andrey Kurdyumov</owners>
@@ -11,8 +11,8 @@
     <description>Provides a behavior for making an element an overlay</description>
     <dependencies>
         <dependency id="polymer" version="1.0.0" />
-        <dependency id="polymer-fit-behavior" version="1.0.0" />
-        <dependency id="polymer-resizable-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-fit-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-resizable-behavior" version="1.0.0" />
     </dependencies>
   </metadata>
 </package>

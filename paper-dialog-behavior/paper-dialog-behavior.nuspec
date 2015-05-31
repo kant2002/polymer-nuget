@@ -11,7 +11,7 @@
     <description>Implements a behavior used for material design dialogs</description>
     <dependencies>
         <dependency id="polymer" version="1.0.0" />
-        <dependency id="polymer-overlay-behaviors" version="1.0.0" />
+        <dependency id="polymer-iron-overlay-behavior" version="1.0.0" />
         <dependency id="paper-styles" version="1.0.0" />
     </dependencies>
   </metadata>

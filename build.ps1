@@ -2,6 +2,10 @@
     [switch]$update = $false,
     [switch]$generate = $false,
     [switch]$publish = $false,
+    [switch]$useMyGet = $false,
+    [switch]$noiron = $false,
+    [switch]$nopaper = $false,
+    [string]$apiKey = "",
     [string]$version = "1.0.0"
 )
 
@@ -187,7 +191,11 @@ function Push-Package() {
     param([string]$name, [string]$version)
     $nuget = ".\Nuget.exe"
     
-    &$nuget push dist\$version\$name.$version.nupkg
+    if ($useMyGet) {
+        &$nuget push dist\$version\$name.*.nupkg $apiKey -Source https://www.myget.org/F/polymer-nuget/api/v2/package
+    } else {
+        &$nuget push dist\$version\$name.*.nupkg
+    }
 }
 
 function Update-All() {
@@ -198,13 +206,92 @@ function Update-All() {
     Update-Paper-Elements
 }
 
-function Push-All-Packages() {
-    $version = "1.0.0"
-    #This package is deprecated.
-    Push-Package "polymer" $version
-    Push-Package "polymer-core-component-page" $version
-    Push-Package "polymer-core-elements" $version
+function Push-Iron() {
+    param([string]$version)
+    
+    Push-Package "prism-element" $version
+    Push-Package "marked-element" $version
+    
+    Push-Package "polymer-iron-a11y-announcer" $version
+    Push-Package "polymer-iron-a11y-keys-behavior" $version
+    Push-Package "polymer-iron-a11y-keys" $version
+    Push-Package "polymer-iron-ajax" $version
+    Push-Package "polymer-iron-meta" $version
+    Push-Package "polymer-iron-flex-layout" $version
+    Push-Package "polymer-iron-behaviors" $version
+    Push-Package "polymer-iron-validator-behavior" $version
+    Push-Package "polymer-iron-validatable-behavior" $version
+    Push-Package "polymer-iron-autogrow-textarea" $version
+    Push-Package "polymer-iron-collapse" $version
+    Push-Package "polymer-iron-fit-behavior" $version
+    Push-Package "polymer-iron-form" $version
+    Push-Package "polymer-iron-form-element-behavior" $version
+    Push-Package "polymer-iron-icon" $version
+    Push-Package "polymer-iron-iconset" $version
+    Push-Package "polymer-iron-iconset-svg" $version
+    Push-Package "polymer-iron-icons" $version
+    Push-Package "polymer-iron-image" $version
+    Push-Package "polymer-iron-input" $version
+    Push-Package "polymer-iron-jsonp-library" $version
+    Push-Package "polymer-iron-localstorage" $version
+    Push-Package "polymer-iron-media-query" $version
+    Push-Package "polymer-iron-resizable-behavior" $version
+    Push-Package "polymer-iron-selector" $version
+    Push-Package "polymer-iron-menu-behavior" $version
+    Push-Package "polymer-iron-overlay-behavior" $version
+    Push-Package "polymer-iron-pages" $version
+    Push-Package "polymer-iron-range-behavior" $version
+    Push-Package "polymer-iron-signals" $version
+    Push-Package "polymer-iron-test-helpers" $version
+    Push-Package "polymer-iron-component-page" $version
+    Push-Package "polymer-iron-doc-viewer" $version
+    Push-Package "polymer-iron-elements" $version
+}
+
+function Push-Paper() {
+    param([string]$version)
+    
+    Push-Package "paper-behaviors" $version
+    Push-Package "paper-header-panel" $version
+    Push-Package "paper-styles" $version
+    Push-Package "paper-material" $version
+    Push-Package "paper-ripple" $version
+    Push-Package "neon-animation" $version
+    Push-Package "paper-button" $version
+    Push-Package "paper-toolbar" $version
+    Push-Package "paper-checkbox" $version
+    Push-Package "paper-drawer-panel" $version
+    Push-Package "paper-dialog-behavior" $version
+    Push-Package "paper-dialog-scrollable" $version
+    Push-Package "paper-dialog" $version
+    Push-Package "paper-fab" $version
+    Push-Package "paper-icon-button" $version
+    Push-Package "paper-input" $version
+    Push-Package "paper-item" $version
+    Push-Package "paper-menu" $version
+    Push-Package "paper-progress" $version
+    Push-Package "paper-radio-button" $version
+    Push-Package "paper-radio-group" $version
+    Push-Package "paper-scroll-header-panel" $version
+    Push-Package "paper-slider" $version
+    Push-Package "paper-spinner" $version
+    Push-Package "paper-tabs" $version
+    Push-Package "paper-toast" $version
+    Push-Package "paper-toggle-button" $version
     Push-Package "paper-elements" $version
+}
+
+function Push-All-Packages() {
+    param([string]$version)
+    Push-Package "polymer" $version
+
+    if (-Not $noiron) {
+        Push-Iron $version
+    }
+    
+    if (-Not $nopaper) {    
+        Push-Paper $version
+    }
 }
 
 if ($update) {
