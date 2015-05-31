@@ -10,12 +10,40 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Polymer core elements</description>
     <dependencies>
-        <!-- 
-            This is dependency for resolving cyclic dependency 
-            which specified in bower
-        -->
         <dependency id="polymer" version="1.0.0" />
-        <dependency id="polymer-icon-ajax" version="1.0.0" />
+        <dependency id="polymer-iron-a11y-announcer" version="1.0.0" />
+        <dependency id="polymer-iron-a11y-keys" version="1.0.0" />
+        <dependency id="polymer-iron-a11y-keys-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-ajax" version="1.0.0" />
+        <dependency id="polymer-iron-autogrow-textarea" version="1.0.0" />
+        <dependency id="polymer-iron-behaviors" version="1.0.0" />
+        <dependency id="polymer-iron-collapse" version="1.0.0" />
+        <dependency id="polymer-iron-component-page" version="1.0.0" />
+        <dependency id="polymer-iron-doc-viewer" version="1.0.0" />
+        <dependency id="polymer-iron-fit-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-flex-layout" version="1.0.0" />
+        <dependency id="polymer-iron-form" version="1.0.0" />
+        <dependency id="polymer-iron-form-element-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-icon" version="1.0.0" />
+        <dependency id="polymer-iron-icons" version="1.0.0" />
+        <dependency id="polymer-iron-iconset" version="1.0.0" />
+        <dependency id="polymer-iron-iconset-svg" version="1.0.0" />
+        <dependency id="polymer-iron-image" version="1.0.0" />
+        <dependency id="polymer-iron-input" version="1.0.0" />
+        <dependency id="polymer-iron-jsonp-library" version="1.0.0" />
+        <dependency id="polymer-iron-localstorage" version="1.0.0" />
+        <dependency id="polymer-iron-media-query" version="1.0.0" />
+        <dependency id="polymer-iron-menu-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-meta" version="1.0.0" />
+        <dependency id="polymer-iron-overlay-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-pages" version="1.0.0" />
+        <dependency id="polymer-iron-range-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-resizable-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-selector" version="1.0.0" />
+        <dependency id="polymer-iron-signals" version="1.0.0" />
+        <dependency id="polymer-iron-test-helpers" version="1.0.0" />
+        <dependency id="polymer-iron-validatable-behavior" version="1.0.0" />
+        <dependency id="polymer-iron-validator-behavior" version="1.0.0" />
     </dependencies>
   </metadata>
 </package>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>polymer-iron-doc-viewer</id>
+    <version>1.0.2</version>
+    <authors>Andrey Kurdyumov</authors>
+    <owners>Andrey Kurdyumov</owners>
+    <projectUrl>https://github.com/Polymer/polymer</projectUrl>
+    <iconUrl>https://www.polymer-project.org/images/logos/p-logo-32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Elements for rendering Polymer component documentation.</description>
+    <dependencies>
+        <dependency id="polymer" version="1.0.0" />
+        <dependency id="marked-element" version="1.0.0" />
+        <dependency id="paper-styles" version="1.0.0" />
+        <dependency id="paper-button" version="1.0.0" />
+        <dependency id="prism-element" version="1.0.2" />
+    </dependencies>
+  </metadata>
+</package>

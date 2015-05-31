@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>paper-checkbox</id>
+    <version>1.0.1</version>
+    <authors>Andrey Kurdyumov</authors>
+    <owners>Andrey Kurdyumov</owners>
+    <projectUrl>https://github.com/Polymer/polymer</projectUrl>
+    <iconUrl>https://www.polymer-project.org/images/logos/p-logo-32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A material design checkbox</description>
+    <dependencies>
+        <dependency id="polymer" version="1.0.0" />
+        <dependency id="paper-ripple" version="1.0.0" />
+        <dependency id="paper-styles" version="1.0.0" />
+        <dependency id="paper-behaviors" version="1.0.0" />
+    </dependencies>
+  </metadata>
+</package>

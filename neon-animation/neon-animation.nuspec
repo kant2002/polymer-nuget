@@ -1,22 +1,18 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>polymer-core-component-page</id>
-    <version>1.0.0</version>
+    <id>neon-animation</id>
+    <version>1.0.1</version>
     <authors>Andrey Kurdyumov</authors>
     <owners>Andrey Kurdyumov</owners>
     <projectUrl>https://github.com/Polymer/polymer</projectUrl>
     <iconUrl>https://www.polymer-project.org/images/logos/p-logo-32.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Turns a raw element definition into beautiful documentation</description>
+    <description>A responsive drawer panel</description>
     <dependencies>
         <dependency id="polymer" version="1.0.0" />
-        <dependency id="polymer-iron-doc-viewer" version="1.0.1" />
-        <dependency id="polymer-iron-flex-layout" version="1.0.0" />
-        <dependency id="paper-toolbar" version="1.0.0" />
-        <dependency id="polymer-iron-ajax" version="1.0.0" />
-        <dependency id="paper-header-panel" version="1.0.0" />
-        <dependency id="polymer-iron-icons" version="1.0.0" />
+        <dependency id="polymer-iron-meta" version="1.0.0" />
+        <dependency id="polymer-iron-resizable-behavior" version="1.0.0" />
         <dependency id="polymer-iron-selector" version="1.0.0" />
         <dependency id="paper-styles" version="1.0.0" />
     </dependencies>

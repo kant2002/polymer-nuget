@@ -12,16 +12,13 @@ function Update-Polymer() {
     Update-Nuget "polymer" "webcomponentsjs"
 }
 
-function Update-Polymer-Iron-Component-Page() {
-    Update-Nuget "polymer-iron-component-page" "iron-doc-viewer"
-    Update-Nuget "polymer-iron-component-page" "iron-flex-layout"
-    Update-Nuget "polymer-iron-component-page" "paper-toolbar"
-    Update-Nuget "polymer-iron-component-page" "hydrolysis"
-    Update-Nuget "polymer-iron-component-page" "paper-header-panel"
-    Update-Nuget "polymer-iron-component-page" "iron-icons"
-    Update-Nuget "polymer-iron-component-page" "iron-selector"
-    Update-Nuget "polymer-iron-component-page" "paper-styles"
-    Update-Nuget "polymer-iron-component-page" "iron-component-page"
+function Update-Marked-Element() {
+    Update-Nuget "marked-element" "marked-element"
+}
+
+function Update-Prism-Element() {
+    Update-Nuget "prism-element" "prism"
+    Update-Nuget "prism-element" "prism-element"
 }
 
 function Update-Polymer-Iron-Elements() {
@@ -56,38 +53,30 @@ function Update-Polymer-Iron-Elements() {
     Update-Nuget "polymer-iron-range-behavior" "iron-range-behavior"
     Update-Nuget "polymer-iron-signals" "iron-signals"
     Update-Nuget "polymer-iron-test-helpers" "iron-test-helpers"
+    Update-Nuget "polymer-iron-doc-viewer" "iron-doc-viewer"
+    
+    Update-Nuget "polymer-iron-component-page" "hydrolysis"
+    Update-Nuget "polymer-iron-component-page" "iron-component-page"
 }
 
 function Update-Paper-Elements() {
-    $package = "paper-elements"
-    Update-Nuget $package "core-a11y-keys"
-    Update-Nuget $package "paper-behaviors"
-    Update-Nuget $package "paper-button"
-    Update-Nuget $package "paper-checkbox"
-    Update-Nuget $package "paper-dialog"
-    Update-Nuget $package "paper-dialog-behavior"
-    Update-Nuget $package "paper-dialog-scrollable"
-    Update-Nuget $package "paper-drawer-panel"
-    Update-Nuget $package "paper-fab"
-    Update-Nuget $package "paper-header-panel"
-    Update-Nuget $package "paper-icon-button"
-    Update-Nuget $package "paper-menu-button"
-    Update-Nuget $package "paper-input"
-    Update-Nuget $package "paper-item"
-    Update-Nuget $package "paper-material"
-    Update-Nuget $package "paper-menu"
-    Update-Nuget $package "paper-progress"
-    Update-Nuget $package "paper-radio-button"
-    Update-Nuget $package "paper-radio-group"
-    Update-Nuget $package "paper-ripple"
-    Update-Nuget $package "paper-slider"
-    Update-Nuget $package "paper-spinner"
-    Update-Nuget $package "paper-styles"
-    Update-Nuget $package "paper-tabs"
-    Update-Nuget $package "paper-toast"
-    Update-Nuget $package "paper-toggle-button"
-    Update-Nuget $package "paper-toolbar"
-    Update-Nuget $package "paper-scroll-header-panel"
+    Update-Nuget "paper-behaviors" "paper-behaviors"
+    Update-Nuget "paper-header-panel" "paper-header-panel"
+    Update-Nuget "paper-styles" "paper-styles"
+    Update-Nuget "paper-material" "paper-material"
+    Update-Nuget "paper-ripple" "paper-ripple"
+    
+    Update-Nuget "neon-animation" "web-animations-js"
+    Update-Nuget "neon-animation" "neon-animation"
+    
+    Update-Nuget "paper-button" "paper-button"
+    Update-Nuget "paper-toolbar" "paper-toolbar"
+    Update-Nuget "paper-checkbox" "paper-checkbox"
+    Update-Nuget "paper-drawer-panel" "paper-drawer-panel"
+    Update-Nuget "paper-dialog-behavior" "paper-dialog-behavior"
+    Update-Nuget "paper-dialog-scrollable" "paper-dialog-scrollable"
+    Update-Nuget "paper-dialog" "paper-dialog"
+    Update-Nuget "paper-fab" "paper-fab"
 }
 
 function Generate-Package() {
@@ -102,15 +91,45 @@ function Generate-All-Packages() {
     param([string]$version)
     
     Generate-Package "polymer" $version
+
+    Generate-Package "prism-element" $version
+    Generate-Package "marked-element" $version
     
     Generate-Package "polymer-iron-a11y-announcer" $version
     Generate-Package "polymer-iron-a11y-keys-behavior" $version
     Generate-Package "polymer-iron-a11y-keys" $version
     Generate-Package "polymer-iron-ajax" $version
     Generate-Package "polymer-iron-meta" $version
-    
+    Generate-Package "polymer-iron-flex-layout" $version
+    Generate-Package "polymer-iron-behaviors" $version
+    Generate-Package "polymer-iron-validator-behavior" $version
+    Generate-Package "polymer-iron-validatable-behavior" $version
+    Generate-Package "polymer-iron-autogrow-textarea" $version
+    Generate-Package "polymer-iron-collapse" $version
+    Generate-Package "polymer-iron-fit-behavior" $version
+    Generate-Package "polymer-iron-form" $version
+    Generate-Package "polymer-iron-form-element-behavior" $version
+    Generate-Package "polymer-iron-icon" $version
+    Generate-Package "polymer-iron-iconset" $version
+    Generate-Package "polymer-iron-iconset-svg" $version
+    Generate-Package "polymer-iron-icons" $version
+    Generate-Package "polymer-iron-image" $version
+    Generate-Package "polymer-iron-input" $version
+    Generate-Package "polymer-iron-jsonp-library" $version
+    Generate-Package "polymer-iron-localstorage" $version
+    Generate-Package "polymer-iron-media-query" $version
+    Generate-Package "polymer-iron-resizable-behavior" $version
+    Generate-Package "polymer-iron-selector" $version
+    Generate-Package "polymer-iron-menu-behavior" $version
+    Generate-Package "polymer-iron-overlay-behavior" $version
+    Generate-Package "polymer-iron-pages" $version
+    Generate-Package "polymer-iron-range-behavior" $version
+    Generate-Package "polymer-iron-signals" $version
+    Generate-Package "polymer-iron-test-helpers" $version
     Generate-Package "polymer-iron-component-page" $version
+    Generate-Package "polymer-iron-iron-doc-viewer" $version
     Generate-Package "polymer-iron-elements" $version
+    
     Generate-Package "paper-elements" $version
 }
 
@@ -123,7 +142,8 @@ function Push-Package() {
 
 function Update-All() {
     Update-Polymer
-    Update-Polymer-Iron-Component-Page
+    Update-Prism-Element
+    Update-Marked-Element
     Update-Polymer-Iron-Elements
     Update-Paper-Elements
 }
