@@ -30,3 +30,6 @@ Install-Package Paper-Elements
 ```
 
 Each element could be installed individually using same name as in Bower.
+
+# Breacking changes from previous release
+Old release install to the `~/Scripts/Polymer` library, now it is installed just in `~/Scripts/` folder.
