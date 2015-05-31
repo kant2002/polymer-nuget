@@ -1,3 +1,11 @@
+ param (
+    [switch]$update = $false,
+    [switch]$generate = $false,
+    [switch]$publish = $false,
+    [string]$version = "1.0.0"
+)
+
+
 function Update-Nuget {
     param([string]$nugetPackage, [string]$bowerPackage)
         
@@ -13,6 +21,7 @@ function Update-Polymer() {
 }
 
 function Update-Marked-Element() {
+    Update-Nuget "marked-element" "marked"
     Update-Nuget "marked-element" "marked-element"
 }
 
@@ -28,10 +37,10 @@ function Update-Polymer-Iron-Elements() {
     Update-Nuget "polymer-iron-ajax" "promise-polyfill"
     Update-Nuget "polymer-iron-ajax" "iron-ajax"
     Update-Nuget "polymer-iron-meta" "iron-meta"
-    Update-Nuget "polymer-iron-flex-layout" "iron-iron-flex-layout"
-    Update-Nuget "polymer-iron-behaviors" "iron-iron-behaviors"
-    Update-Nuget "polymer-iron-validator-behavior" "iron-iron-validator-behavior"
-    Update-Nuget "polymer-iron-validatable-behavior" "iron-iron-validatable-behavior"
+    Update-Nuget "polymer-iron-flex-layout" "iron-flex-layout"
+    Update-Nuget "polymer-iron-behaviors" "iron-behaviors"
+    Update-Nuget "polymer-iron-validator-behavior" "iron-validator-behavior"
+    Update-Nuget "polymer-iron-validatable-behavior" "iron-validatable-behavior"
     Update-Nuget "polymer-iron-autogrow-textarea" "iron-autogrow-textarea"
     Update-Nuget "polymer-iron-collapse" "iron-collapse"
     Update-Nuget "polymer-iron-fit-behavior" "iron-fit-behavior"
@@ -141,7 +150,7 @@ function Generate-All-Packages() {
     Generate-Package "polymer-iron-signals" $version
     Generate-Package "polymer-iron-test-helpers" $version
     Generate-Package "polymer-iron-component-page" $version
-    Generate-Package "polymer-iron-iron-doc-viewer" $version
+    Generate-Package "polymer-iron-doc-viewer" $version
     Generate-Package "polymer-iron-elements" $version
     
     Generate-Package "paper-behaviors" $version
@@ -198,7 +207,12 @@ function Push-All-Packages() {
     Push-Package "paper-elements" $version
 }
 
-$version = "1.0.0"
-Update-All
-#Generate-All-Packages $version
-#Push-All-Packages $version
+if ($update) {
+    Update-All
+}
+if ($generate) {
+    Generate-All-Packages $version
+}
+if ($publish) {
+    Push-All-Packages $version
+}

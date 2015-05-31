@@ -5,3 +5,6 @@ dist/
 polymer/content/
 polymer-iron-*/content/
 paper-*/content/
+marked-element/content/
+prism-element/content/
+neon-*/content/

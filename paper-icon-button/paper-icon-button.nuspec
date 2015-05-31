@@ -17,7 +17,6 @@
         <dependency id="polymer-iron-flex-layout" version="1.0.0" />
         <dependency id="polymer-iron-icon" version="1.0.0" />
         <dependency id="polymer-iron-icons" version="1.0.0" />
-        <dependency id="paper-styles" version="1.0.0" />
     </dependencies>
   </metadata>
 </package>
