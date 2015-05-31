@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>paper-elements</id>
-    <version>0.5.5</version>
+    <id>polymer-iron-selector</id>
+    <version>1.0.2</version>
     <authors>Andrey Kurdyumov</authors>
     <owners>Andrey Kurdyumov</owners>
     <projectUrl>https://github.com/Polymer/polymer</projectUrl>
     <iconUrl>https://www.polymer-project.org/images/logos/p-logo-32.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Paper elements</description>
+    <description>Manages a set of elements that can be selected</description>
     <dependencies>
         <dependency id="polymer" version="1.0.0" />
-        <dependency id="polymer-iron-elements" version="1.0.0" />
     </dependencies>
   </metadata>
 </package>

@@ -1,21 +1,17 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>polymer-core-component-page</id>
-    <version>0.5.5</version>
+    <id>polymer-iron-iconset</id>
+    <version>1.0.0</version>
     <authors>Andrey Kurdyumov</authors>
     <owners>Andrey Kurdyumov</owners>
     <projectUrl>https://github.com/Polymer/polymer</projectUrl>
     <iconUrl>https://www.polymer-project.org/images/logos/p-logo-32.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Polymer core compoment page</description>
+    <description>Represents a set of icons</description>
     <dependencies>
-        <dependency id="polymer-platform" version="0.5.5" />
-        <!-- 
-            This is dependency for resolving cyclic dependency 
-            which specified in bower
-        -->
-        <dependency id="polymer-cyclic" version="0.5.5" />
+        <dependency id="polymer" version="1.0.0" />
+        <dependency id="polymer-iron-meta" version="1.0.0" />
     </dependencies>
   </metadata>
 </package>
