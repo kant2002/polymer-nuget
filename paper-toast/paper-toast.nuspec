@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>paper-toast</id>
+    <version>1.0.0</version>
+    <authors>Andrey Kurdyumov</authors>
+    <owners>Andrey Kurdyumov</owners>
+    <projectUrl>https://github.com/Polymer/polymer</projectUrl>
+    <iconUrl>https://www.polymer-project.org/images/logos/p-logo-32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A material design notification toast</description>
+    <dependencies>
+        <dependency id="polymer" version="1.0.0" />
+        <dependency id="polymer-iron-a11y-announcer" version="1.0.0" />
+        <dependency id="paper-styles" version="1.0.0" />
+    </dependencies>
+  </metadata>
+</package>

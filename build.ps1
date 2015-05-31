@@ -25,6 +25,7 @@ function Update-Polymer-Iron-Elements() {
     Update-Nuget "polymer-iron-a11y-announcer" "iron-a11y-announcer"
     Update-Nuget "polymer-iron-a11y-keys-behavior" "iron-a11y-keys-behavior"
     Update-Nuget "polymer-iron-a11y-keys" "iron-a11y-keys"
+    Update-Nuget "polymer-iron-ajax" "promise-polyfill"
     Update-Nuget "polymer-iron-ajax" "iron-ajax"
     Update-Nuget "polymer-iron-meta" "iron-meta"
     Update-Nuget "polymer-iron-flex-layout" "iron-iron-flex-layout"
@@ -77,6 +78,19 @@ function Update-Paper-Elements() {
     Update-Nuget "paper-dialog-scrollable" "paper-dialog-scrollable"
     Update-Nuget "paper-dialog" "paper-dialog"
     Update-Nuget "paper-fab" "paper-fab"
+    Update-Nuget "paper-icon-button" "paper-icon-button"
+    Update-Nuget "paper-input" "paper-input"
+    Update-Nuget "paper-item" "paper-item"
+    Update-Nuget "paper-menu" "paper-menu"
+    Update-Nuget "paper-progress" "paper-progress"
+    Update-Nuget "paper-radio-button" "paper-radio-button"
+    Update-Nuget "paper-radio-group" "paper-radio-group"
+    Update-Nuget "paper-scroll-header-panel" "paper-scroll-header-panel"
+    Update-Nuget "paper-slider" "paper-slider"
+    Update-Nuget "paper-spinner" "paper-spinner"
+    Update-Nuget "paper-tabs" "paper-tabs"
+    Update-Nuget "paper-toast" "paper-toast"
+    Update-Nuget "paper-toggle-button" "paper-toggle-button"
 }
 
 function Generate-Package() {
@@ -130,6 +144,33 @@ function Generate-All-Packages() {
     Generate-Package "polymer-iron-iron-doc-viewer" $version
     Generate-Package "polymer-iron-elements" $version
     
+    Generate-Package "paper-behaviors" $version
+    Generate-Package "paper-header-panel" $version
+    Generate-Package "paper-styles" $version
+    Generate-Package "paper-material" $version
+    Generate-Package "paper-ripple" $version
+    Generate-Package "neon-animation" $version
+    Generate-Package "paper-button" $version
+    Generate-Package "paper-toolbar" $version
+    Generate-Package "paper-checkbox" $version
+    Generate-Package "paper-drawer-panel" $version
+    Generate-Package "paper-dialog-behavior" $version
+    Generate-Package "paper-dialog-scrollable" $version
+    Generate-Package "paper-dialog" $version
+    Generate-Package "paper-fab" $version
+    Generate-Package "paper-icon-button" $version
+    Generate-Package "paper-input" $version
+    Generate-Package "paper-item" $version
+    Generate-Package "paper-menu" $version
+    Generate-Package "paper-progress" $version
+    Generate-Package "paper-radio-button" $version
+    Generate-Package "paper-radio-group" $version
+    Generate-Package "paper-scroll-header-panel" $version
+    Generate-Package "paper-slider" $version
+    Generate-Package "paper-spinner" $version
+    Generate-Package "paper-tabs" $version
+    Generate-Package "paper-toast" $version
+    Generate-Package "paper-toggle-button" $version
     Generate-Package "paper-elements" $version
 }
 
